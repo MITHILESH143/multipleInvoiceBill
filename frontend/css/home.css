@@ -1,0 +1,194 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        
+        .invoice-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #333;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .company-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .company-details {
+            font-size: 11px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .invoice-title {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            margin: 15px 0;
+            text-decoration: underline;
+        }
+        
+        .invoice-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        
+        .bill-to, .invoice-details {
+            width: 48%;
+        }
+        
+        .section-title {
+            font-weight: bold;
+            font-size: 12px;
+            margin-bottom: 8px;
+            text-decoration: underline;
+        }
+        
+        .info-text {
+            font-size: 11px;
+            line-height: 1.6;
+            margin-bottom: 3px;
+        }
+        
+        .billing-period {
+            background: #f0f0f0;
+            padding: 8px;
+            margin: 15px 0;
+            font-size: 11px;
+            font-weight: bold;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 11px;
+        }
+        
+        th {
+            background: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            border: 1px solid #333;
+        }
+        
+        td {
+            padding: 4px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        .amount-col {
+            text-align: right;
+        }
+        
+        .summary-table {
+            width: 350px;
+            margin-left: auto;
+            margin-top: 20px;
+        }
+        
+        .summary-table td {
+            padding: 6px 10px;
+            border: 1px solid #ddd;
+        }
+        
+        .summary-label {
+            font-weight: bold;
+            text-align: left;
+            background: #f5f5f5;
+        }
+        
+        .summary-value {
+            text-align: right;
+            font-weight: bold;
+        }
+        
+        .total-row {
+            background: #333;
+            color: white;
+        }
+        
+        .amount-words {
+            margin: 15px 0;
+            padding: 10px;
+            background: #f0f0f0;
+            font-size: 11px;
+            line-height: 1.6;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            font-size: 10px;
+        }
+        
+        .bank-details {
+            margin: 15px 0;
+            padding: 10px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+        }
+        
+        .bank-details-title {
+            font-weight: bold;
+            margin-bottom: 8px;
+            font-size: 11px;
+        }
+        
+        .declaration {
+            margin-top: 20px;
+            font-size: 10px;
+            line-height: 1.6;
+        }
+        
+        .signature {
+            text-align: right;
+            margin-top: 30px;
+            font-size: 11px;
+        }
+        
+        .signature-line {
+            margin-top: 50px;
+            border-top: 1px solid #333;
+            display: inline-block;
+            padding-top: 5px;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .invoice-container {
+                box-shadow: none;
+                padding: 10px;
+            }
+        }
+   

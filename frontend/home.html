@@ -9,11 +9,12 @@
 
 <body>
     <h1>Generate the billing by using the data file are upload here like MIS</h1>
-    <form id="fileUpload">
-        <input type="file" name="MIS" accept=".xmls,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
-      
-        <button type="submit"></button>
+    <form id="fileUpload" enctype="multipart/form-data">
+        <input type="file" name="MIS" accept=".xls,.xlsx" />
+      <!-- <input type="date" name="invoiceDate" placeholder="Enter the Invoice Date" /> -->
+        <button type="submit">Submit</button>
     </form>
 </body>
+<script src="./js/home.js" ></script>
 
 </html>
