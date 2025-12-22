@@ -1,6 +1,6 @@
 import express from "express";
-import getWareeDetails from "../controller/wareeController.js"
+import createWareeDetails from "../controller/wareeController.js"
 const Router = express.Router();
-Router.post('/', getWareeDetails);
+Router.post('/', createWareeDetails);
 
 export default Router;

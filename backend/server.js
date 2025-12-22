@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from "dotenv"
 import connectionDB from "./config/dbConnection.js";
-import getWareeDetailsRouter from "./routes/wareeRoute.js"
+import createWareeDetailsRouter from "./routes/wareeRoute.js"
 import upload from "./config/uploadFile.js";
 connectionDB();
 dotenv.config();
@@ -14,7 +14,7 @@ app.use(express.static("../frontend"));
 app.get("/", (req, res) => {
   res.send("Server is running 🚀");
 });
-app.use("/api/getWareeDetails", upload.single('MIS'), getWareeDetailsRouter );
+app.use("/api/createWareeDetails", upload.single('MIS'), createWareeDetailsRouter);
 
 // server start
 app.listen(port, () => {

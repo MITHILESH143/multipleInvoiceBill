@@ -3,7 +3,56 @@ document.addEventListener("DOMContentLoaded", function () {
     // const date = document.querySelector('input[name="invoiceDate"]');
     const form = document.querySelector('#fileUpload');
 
-    form.addEventListener('submit', async(e) => { 
+    function createCompanyTable(data) {
+  const container = document.getElementById("tableContainer");
+
+  // Clear old table if exists
+  container.innerHTML = "";
+
+  // Create table
+  const table = document.createElement("table");
+  table.id = "companyTable";
+  table.border = "1";
+
+  // Create thead
+  const thead = document.createElement("thead");
+  const headRow = document.createElement("tr");
+
+  const headers = ["Case Qty", "WEL/WRPL INVOICE NO", "City", "Phone"];
+
+  headers.forEach(text => {
+    const th = document.createElement("th");
+    th.textContent = text;
+    headRow.appendChild(th);
+  });
+
+  thead.appendChild(headRow);
+
+  // Create tbody
+  const tbody = document.createElement("tbody");
+
+  // Fill rows
+  for (const item of data) {
+    const row = document.createElement("tr");
+
+    row.innerHTML = `
+      <td>${item['Case Qty'] ?? ""}</td>
+      <td>${item['WEL/WRPL INVOICE NO.'] ?? ""}</td>
+      <td>${item.city ?? ""}</td>
+      <td>${item.phone ?? ""}</td>
+    `;
+
+    tbody.appendChild(row);
+  }
+
+  // Append all
+  table.appendChild(thead);
+  table.appendChild(tbody);
+  container.appendChild(table);
+}
+
+
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
         const formData = new FormData(form);
 
@@ -13,17 +62,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
         //     console.log(`${DateOfYears} and ${DateOfYears + 1}`);
         // };
-        const response = await fetch("http://localhost:5000/api/getWareeDetails",{
+        const response = await fetch("http://localhost:5000/api/createWareeDetails", {
             method: "POST",
             body: formData
 
         });
         const result = await response.json();
-        if(result.Success){
+        if (result.Success) {
             console.log(result.Data);
             form.reset();
         };
-
         
+        const dataCompany = result.Data;
+        createCompanyTable(dataCompany);
+
+
     });
 });
