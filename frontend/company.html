@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Details</title>
+</head>
+
+<body>
+    <form id="companyDetailsForm" enctype="multipart/form-data">
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tbody>
+
+                <tr>
+                    <td>Company Name</td>
+                    <td colspan="3">
+                        <input type="text" name="companyName" placeholder="Enter your company name">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Company Logo</td>
+                    <td colspan="3">
+                        <input type="file" name="companyLogo" accept=".png,.jpg,.jpeg">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Company Address</td>
+                    <td colspan="3">
+                        <textarea name="companyAddress" rows="2" placeholder="Enter company address"></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>GSTIN</td>
+                    <td>
+                        <input type="text" name="gstNumber" placeholder="Enter GST Number">
+                    </td>
+
+                    <td>State Code</td>
+                    <td>
+                        <input type="text" name="stateCode" placeholder="Enter State Code">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>State Name</td>
+                    <td>
+                        <input type="text" name="stateName" placeholder="Enter State Name">
+                    </td>
+
+                    <td>Contact No.</td>
+                    <td>
+                        <input type="text" name="companyContactNo" maxlength="10" placeholder="0123456789">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Company Email</td>
+                    <td colspan="3">
+                        <input type="email" name="companyEmail" placeholder="example@gmail.com">
+                    </td>
+                </tr>
+
+                <!-- Buttons -->
+                <tr>
+                    <td colspan="4" style="text-align:center;">
+                        <button type="reset">Reset</button>
+                        <button type="submit">Submit</button>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </form>
+
+
+</body>
+<script src="./js/company.js"></script>
+
+</html>

@@ -1,23 +1,36 @@
 {
-  "name": "backend",
+  "name": "billing_software",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "This is make for sample to make a invoice bill",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MITHILESH143/multipleInvoiceBill.git"
+  },
+  "keywords": [
+    "multiple",
+    "invoice",
+    "generate"
+  ],
+  "author": "IT Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MITHILESH143/multipleInvoiceBill/issues"
+  },
+  "homepage": "https://github.com/MITHILESH143/multipleInvoiceBill#readme",
   "dependencies": {
-    "axios": "^1.13.2",
+    "cloudinary": "^2.8.0",
     "dotenv": "^17.2.3",
     "exceljs": "^4.4.0",
     "express": "^5.2.1",
-    "mongoose": "^9.0.1",
+    "mongoose": "^9.0.2",
     "multer": "^2.0.2",
     "nodemon": "^3.1.11"
-  },
-  "description": ""
+  }
 }
